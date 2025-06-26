@@ -1,0 +1,21 @@
+{
+  "version": 4,
+  "configurations": [
+    {
+      "name": "Win64",
+      "compilerPath": "C:/Dev/mingw64/bin/gcc.exe",
+      "intelliSenseMode": "gcc-x64",
+      "cppStandard": "c++17",
+      "includePath": [
+        "${workspaceFolder}/src",                   // tu código
+        "C:/Dev/SFML-2.5.1/include"                 // los headers de SFML
+      ],
+      "browse": {
+        "path": [
+          "${workspaceFolder}/src",
+          "C:/Dev/SFML-2.5.1/include"
+        ]
+      }
+    }
+  ]
+}

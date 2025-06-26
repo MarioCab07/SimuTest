@@ -1,0 +1,49 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build SFML",
+      "type": "shell",
+      "command": "C:/Dev/mingw64/bin/g++.exe",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "shell": {
+          "executable": "C:\\Windows\\System32\\cmd.exe",
+          "args": ["/c"]
+        }
+      },
+      "args": [
+        "-std=c++17",
+        "-IC:/Dev/MiProyecto/src",
+        "-IC:/Dev/SFML-2.5.1/include",
+        "C:/Dev/MiProyecto/src/main.cpp",
+        "-o", "C:/Dev/MiProyecto/build/MiProyecto.exe",
+        "-LC:/Dev/SFML-2.5.1/lib",
+        "-lsfml-graphics","-lsfml-window","-lsfml-system",
+        "-lopengl32","-lgdi32","-lwinmm","-lole32","-loleaut32","-luuid"
+      ],
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Run SFML",
+      "type": "shell",
+      "command": "${workspaceFolder}\\build\\MiProyecto.exe",
+      "options": {
+        "cwd": "${workspaceFolder}/build",
+        "shell": {
+          "executable": "C:\\Windows\\System32\\cmd.exe",
+          "args": ["/c"]
+        }
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      }
+    }
+  ]
+}
